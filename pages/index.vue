@@ -7,7 +7,3 @@ useHead({
 <template>
   <Main />
 </template>
-
-<style scoped>
-
-</style>

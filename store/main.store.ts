@@ -2,12 +2,10 @@ import { defineStore } from "pinia";
 import type { UserInterface } from "~/types/User.interface";
 
 interface IMainStore {
-    isReady: boolean;
     users: {[id: number]: UserInterface};
 }
 
 const defaultState: IMainStore = {
-    isReady: false,
     users: {},
 };
 

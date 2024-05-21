@@ -33,9 +33,11 @@ function getParams() {
   <div>
     <UiSpinner v-if="pending"/>
 
-    <UserList v-else :users="data?.users || []"/>
+    <div v-else>
+      <UserList :users="data?.users || []"/>
+      <UiPagination :total="data?.total || 0" :limit="limit" :current-page="currentPage" url="/" />
+    </div>
 
-    <UiPagination :total="data?.total || 0" :limit="limit" :current-page="currentPage" url="/" />
   </div>
 </template>
 
