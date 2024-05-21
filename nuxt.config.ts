@@ -4,9 +4,9 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
-      "@pinia/nuxt",
       "@nuxtjs/tailwindcss",
-
+      "@pinia/nuxt",
+      '@pinia-plugin-persistedstate/nuxt',
   ],
     // @ts-ignore
     pinia: {

@@ -1,6 +1,4 @@
 <script setup>
-import UserDetails from "~/components/UserDetails.vue";
-
 useHead({
   title: "User Details"
 })
