@@ -35,7 +35,6 @@ function getParams() {
 
     <UserList v-else :users="data?.users || []"/>
 
-    <NuxtLink to="/details">details</NuxtLink>
     <UiPagination :total="data?.total || 0" :limit="limit" :current-page="currentPage" url="/" />
   </div>
 </template>

@@ -19,7 +19,7 @@ const isAlreadySaved = computed(() => !!store.users[props.user.id])
 
 <template>
   <li>
-    <NuxtLink class="py-4 flex justify-between" :to="'/details'">
+    <NuxtLink class="py-4 flex justify-between" :to="`/details/${props.user.id}`">
       <div class="flex items-center">
         <img :src="user.image" alt="avatar" class="w-10 h-10 rounded-full mr-2">
         <div>

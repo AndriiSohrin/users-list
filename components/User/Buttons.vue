@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import {defineProps} from "vue";
-
 const props = defineProps<{
   isAlreadySaved: boolean;
 }>();
@@ -17,6 +15,6 @@ function handleSave() {
 
 <template>
   <div class="mt-4">
-    <button  @click.prevent="handleSave" class="text-white font-bold py-2 px-4 rounded">{{text}}</button>
+    <button  @click.prevent="handleSave" class="text-white font-bold py-2 px-4 rounded bg-slate-500">{{text}}</button>
   </div>
 </template>

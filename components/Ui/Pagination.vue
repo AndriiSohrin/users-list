@@ -22,11 +22,11 @@ const pages = computed(() => (pageCount.value > 0 ? range(1, pageCount.value) : 
         v-for="page in pages"
         :key="page"
         class="page-item m-1"
-        :class="{ 'bg-blue-500 text-white': currentPage === page, 'bg-white text-blue-500': currentPage !== page }"
+        :class="{ 'bg-blue-500 text-white rounded': currentPage === page, 'bg-white text-blue-500 rounded': currentPage !== page }"
     >
       <NuxtLink
           :to="{ path: url, query: { page: page } }"
-          class="page-link px-3 py-1 rounded border border-gray-300 hover:bg-gray-200"
+          class="page-link px-3 py-1 rounded border border-gray-300 hover:bg-gray-200 inline-block h-full"
       >
         {{ page }}
       </NuxtLink>
