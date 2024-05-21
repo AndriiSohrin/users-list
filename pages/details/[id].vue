@@ -27,7 +27,7 @@ function save(): void {
 
 <template>
   <div>
-    <UiBackButton />
+    <UiBackButton class="absolute -left-24 top-5 hidden" />
 
     <div v-if="pending">Loading...</div>
     <div v-if="user" class="bg-white shadow-md rounded-lg overflow-hidden">

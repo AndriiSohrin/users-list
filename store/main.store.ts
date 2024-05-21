@@ -24,6 +24,10 @@ export const useStore = defineStore('useStore',  {
 
             this.users = u;
         },
+
+        deleteAllUsers(): void {
+            this.users = {}
+        }
     },
     getters: {
         getCountUser(): number {

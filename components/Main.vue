@@ -33,12 +33,14 @@ function getParams() {
 
 <template>
   <div>
-    <UiSpinner v-if="pending"/>
+    <UiSpinner v-if="!data?.users"/>
 
     <div v-else>
-      <div class="text-right">
-        <NuxtLink class="hover:underline" to="/saved" v-if="store.getCountUser">You've already saved <span class="font-bold">{{store.getCountUser}} </span> users</NuxtLink>
+      <div class="text-right min-h-10">
+        <NuxtLink class="hover:underline" to="/saved" v-if="store.getCountUser">
+          You've already saved <span class="font-bold">{{store.getCountUser}} </span> users</NuxtLink>
       </div>
+
       <UserList :users="data?.users || []"/>
       <UiPagination :total="data?.total || 0" :limit="limit" :current-page="currentPage" url="/" />
     </div>
