@@ -55,7 +55,7 @@ function save(): void {
           </div>
 
           <h3 class="text-xl font-bold mb-4">Physical Information</h3>
-          <div class="border border-gray-300 rounded-lg p-4 space-y-2">
+          <div class="border border-gray-300 rounded-lg p-4 space-y-2 mb-3">
             <p class="text-gray-600"><span class="font-semibold">Age:</span> {{ user.age }}</p>
             <p class="text-gray-600 border-t pt-2"><span class="font-semibold">Height:</span> {{ user.height }} cm</p>
             <p class="text-gray-600 border-t pt-2"><span class="font-semibold">Weight:</span> {{ user.weight }} kg</p>
@@ -64,7 +64,7 @@ function save(): void {
           </div>
 
           <h3 class="text-xl font-bold mb-4">Company Information</h3>
-          <div class="border border-gray-300 rounded-lg p-4 space-y-2">
+          <div class="border border-gray-300 rounded-lg p-4 space-y-2 mb-3">
             <p class="text-gray-600"><span class="font-semibold">Company:</span> {{ user.company.name }}</p>
             <p class="text-gray-600 border-t pt-2"><span class="font-semibold">Title:</span> {{ user.company.title }}</p>
             <p class="text-gray-600 border-t pt-2"><span class="font-semibold">Department:</span> {{ user.company.department }}</p>
