@@ -25,6 +25,14 @@ export const useStore = defineStore('useStore',  {
             this.users = u;
         },
     },
+    getters: {
+        getCountUser(): number {
+            return Object.values(this.users).length
+        },
+        getSavedUsersValues(): UserInterface[] {
+            return Object.values(this.users)
+        }
+    },
 
 
     persist:  {

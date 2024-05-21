@@ -1,9 +1,8 @@
 <script setup lang="ts">
 import type { UserInterface } from "~/types/User.interface";
-import Buttons from "~/components/User/Buttons.vue";
 import { useStore } from "~/store/main.store";
 const route = useRoute();
-const router = useRouter();
+
 const { data: user, pending } = await useFetch<UserInterface>('https://dummyjson.com/users/' + route.params.id);
 
 const store = useStore();
@@ -17,20 +16,18 @@ if (!user.value) {
 
 const isAlreadySaved = computed(() => !!store.users[Number(route.params.id)]);
 
-function save() {
+function save(): void {
   if (user.value) {
     store.saveUser(user.value);
   }
 }
 
-const goBack = () => {
-  router.go(-1);
-};
+
 </script>
 
 <template>
   <div>
-    <button @click="goBack" class="hidden md:block absolute -left-24 top-5 bg-slate-500 text-white px-3 py-1 rounded">Back</button>
+    <UiBackButton />
 
     <div v-if="pending">Loading...</div>
     <div v-if="user" class="bg-white shadow-md rounded-lg overflow-hidden">
