@@ -1,7 +1,14 @@
 <script setup lang="ts">
 import {useStore} from "~/store/main.store";
 const store =  useStore()
-
+useSeoMeta({
+  title: 'My Amazing Site',
+  ogTitle: 'My Amazing Site',
+  description: 'This is my amazing site, let me tell you all about it.',
+  ogDescription: 'This is my amazing site, let me tell you all about it.',
+  ogImage: 'https://media.istockphoto.com/id/1189517575/nl/foto/3d-auto-op-zwarte-achtergrond.jpg?s=2048x2048&w=is&k=20&c=vpeKjM3RGHJx0DPFYIaoPKa_Q-wa5VxResNLmw5dgwg=',
+  twitterCard: 'summary_large_image',
+})
 </script>
 
 
